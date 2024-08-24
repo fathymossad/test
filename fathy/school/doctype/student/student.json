@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-23 16:35:08.337061",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_zkfb",
+  "name1",
+  "teacher",
+  "school",
+  "address",
+  "description",
+  "age",
+  "attach",
+  "date_of_joing",
+  "estimate",
+  "outside",
+  "inside",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_zkfb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "depends_on": "doc.name1",
+   "fieldname": "teacher",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Teacher",
+   "options": "Teacher",
+   "reqd": 1
+  },
+  {
+   "fieldname": "school",
+   "fieldtype": "Link",
+   "label": "School",
+   "options": "School",
+   "reqd": 1
+  },
+  {
+   "depends_on": "doc.address",
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Float",
+   "label": "Age"
+  },
+  {
+   "fieldname": "attach",
+   "fieldtype": "Image",
+   "label": "Attach"
+  },
+  {
+   "fieldname": "date_of_joing",
+   "fieldtype": "Date",
+   "label": "Date of joing"
+  },
+  {
+   "depends_on": "doc.Subject",
+   "fieldname": "estimate",
+   "fieldtype": "Select",
+   "label": "Estimate",
+   "options": "Excllent\nVery good\nGood\nAccebtable\nfaild",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "doc.Inside0",
+   "fieldname": "outside",
+   "fieldtype": "Check",
+   "label": "Outside"
+  },
+  {
+   "default": "0",
+   "depends_on": "doc.Outside0\n",
+   "fieldname": "inside",
+   "fieldtype": "Check",
+   "label": "Inside"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Student",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-24 10:33:53.218122",
+ "modified_by": "Administrator",
+ "module": "school",
+ "name": "Student",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
